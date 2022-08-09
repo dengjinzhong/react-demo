@@ -1,7 +1,9 @@
+import {ControlPanel} from "./pages/props/ControlPanel";
+
 function App() {
   return (
     <div className="App">
-      Hello World
+      <ControlPanel />
     </div>
   );
 }
