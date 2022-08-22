@@ -27,7 +27,6 @@ function App() {
 
 export default App;
 ```
-
 # React 组件
 React 组件大致分为两种，函数组件和 class 组件
 React 组件的数据分为两种，prop 和 state ，无论 prop 或者 state 的改变，都可能引起组件的重新渲染
@@ -258,7 +257,7 @@ Counter.js:20 Third--componentDidMount--
 当我们点击 first + 按钮时同时触发其它三个组件的 render 函数，这是因为父组件的更新会触发所有子组件的 render 函数， 这显然不太符合我们预期
 1. shouldComponentUpdate
 要让结果符合我们预期，即只有 first 组件更新，其余组件不更新，就需要用到 shouldComponentUpdate 函数了
-```javascript
+```text
 shouldComponentUpdate(nextProps, nextState, nextContext) {
     return (nextProps.caption !== this.props.caption) || (nextProps.initValue !== this.props.initValue) || (nextState.count !== this.state.count)
 }
